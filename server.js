@@ -12,6 +12,7 @@ app.use(parser.urlencoded({extended:true}))
 app.set("views", path.join(__dirname, "/views"))
 app.engine("ejs", ejs.__express)
 app.set("view engine", "ejs")
+app.use(express.static('views'))
 
 app.listen(port, () =>  {
   console.log(`Server running on http://localhost:${port}`)
