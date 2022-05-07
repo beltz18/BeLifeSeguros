@@ -30,5 +30,29 @@ CREATE TABLE IF NOT EXISTS cliente (
   esc_usr SET("soltero(a)", "casado(a)") NOT NULL,
   fch_reg TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (idt_usr),
+  CONSTRAINT UNIQUE(dni_usr),
   CONSTRAINT UNIQUE(tlf_usr)
+);
+
+/*
+  TABLA contrato
+
+  idt_cnt - identificador
+  tip_cnt - tipo de contrato
+  dni_usr - documento de identidad
+  yea_cnt - año de expedición
+  prm_anu - prima anual
+  fch_reg - fecha de registro
+*/
+
+DROP TABLE IF EXISTS contrato;
+CREATE TABLE IF NOT EXISTS contrato (
+  idt_cnt VARCHAR(32) NOT NULL DEFAULT md5(CURRENT_TIMESTAMP),
+  tip_cnt SET("Vida", "Hogar", "Vehículo") NOT NULL,
+  dni_usr VARCHAR(20) NOT NULL,
+  yea_cnt YEAR DEFAULT YEAR(CURDATE()),
+  prm_anu INT UNSIGNED NOT NULL,
+  fch_reg TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (idt_cnt),
+  FOREIGN KEY (dni_usr) REFERENCES cliente (dni_usr)
 );
