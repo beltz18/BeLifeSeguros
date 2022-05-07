@@ -5,7 +5,7 @@ const ejs     = require("ejs")
 const parser  = require("body-parser")
 const path    = require("path")
 //declarations
-const port    = 4000
+const port    = 4001
 
 //middlewares
 app.use(parser.urlencoded({extended:true}))
@@ -21,3 +21,15 @@ app.listen(port, () =>  {
 app.get('/', (req,res) => {
   res.render("index")
 })
+
+app.get('/user', (req,res) => {
+  res.render("clientes")
+})
+
+app.get('/seguro', (req,res) => {
+  res.render("seguros")
+})
+
+app.post("/user/crud/add", () => {})
+app.post("/user/crud/delete", () => {})
+app.post("/user/crud/update", () => {})
