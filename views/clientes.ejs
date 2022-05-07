@@ -1,14 +1,262 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seguros BeLife</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <h1>Clientes</h1>
+<%- include("./partials/head.ejs") %>
+
   <%- include("./partials/nav.ejs") %>
-</body>
-</html>
+
+  <div class="p-2 relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="p-4 relativeM">
+      <label for="table-search" class="sr-only">Buscar</label>
+      <div class="relative mt-1">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none" id="svg-search">
+          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        </div>
+        <input type="text" id="table-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar Clientes...">
+      </div>
+    </div>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+            Nombre completo
+          </th>
+          <th scope="col" class="px-6 py-3">
+            DNI
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Teléfono
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Género
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Dirección
+          </th>
+          <th scope="col" class="px-6 py-3">
+            Región
+          </th>
+          <th scope="col" class="px-6 py-3 text-center">
+            Acción
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            José Omar Colmenares Ramirez
+          </th>
+          <td class="px-6 py-4">
+            28061587
+          </td>
+          <td class="px-6 py-4">
+            04247407404
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            Las Vegas, Táriba
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Andi Montilla Sánchez
+          </th>
+          <td class="px-6 py-4">
+            26068764
+          </td>
+          <td class="px-6 py-4">
+            04120625089
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Yulieth Andrea Tarazona Carvajal
+          </th>
+          <td class="px-6 py-4">
+            27338524
+          </td>
+          <td class="px-6 py-4">
+            04247331640
+          </td>
+          <td class="px-6 py-4">
+            F
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            José Omar Colmenares Ramirez
+          </th>
+          <td class="px-6 py-4">
+            28061587
+          </td>
+          <td class="px-6 py-4">
+            04247407404
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            Las Vegas, Táriba
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Andi Montilla Sánchez
+          </th>
+          <td class="px-6 py-4">
+            26068764
+          </td>
+          <td class="px-6 py-4">
+            04120625089
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Yulieth Andrea Tarazona Carvajal
+          </th>
+          <td class="px-6 py-4">
+            27338524
+          </td>
+          <td class="px-6 py-4">
+            04247331640
+          </td>
+          <td class="px-6 py-4">
+            F
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            José Omar Colmenares Ramirez
+          </th>
+          <td class="px-6 py-4">
+            28061587
+          </td>
+          <td class="px-6 py-4">
+            04247407404
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            Las Vegas, Táriba
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Andi Montilla Sánchez
+          </th>
+          <td class="px-6 py-4">
+            26068764
+          </td>
+          <td class="px-6 py-4">
+            04120625089
+          </td>
+          <td class="px-6 py-4">
+            M
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+            Yulieth Andrea Tarazona Carvajal
+          </th>
+          <td class="px-6 py-4">
+            27338524
+          </td>
+          <td class="px-6 py-4">
+            04247331640
+          </td>
+          <td class="px-6 py-4">
+            F
+          </td>
+          <td class="px-6 py-3">
+            San Josecito, Torbes
+          </td>
+          <td class="px-6 py-4">
+            Metropolitana
+          </td>
+          <td class="px-6 py-4 text-center">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<%- include("./partials/footer.ejs") %>

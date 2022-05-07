@@ -1,3 +1,5 @@
+require("./util/conection")()
+var conexion = connection()
 //dependencies
 const express = require("express")
 const app     = express()
@@ -14,8 +16,11 @@ app.engine("ejs", ejs.__express)
 app.set("view engine", "ejs")
 app.use(express.static('views'))
 
-app.listen(port, () =>  {
-  console.log(`Server running on http://localhost:${port}`)
+app.listen(port, () => {
+  conexion.connect(function (err) {
+    if (err) throw err
+    console.log(`Server running on http://localhost:${port}`)
+  })
 })
 
 app.get('/', (req,res) => {
