@@ -1,5 +1,5 @@
 module.exports = function () {
-  this.connection = function () {
+  this.connection = () => {
     let mysql = require('mysql')
     let conn = mysql.createConnection({
       host: "localhost",

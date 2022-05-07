@@ -1,5 +1,7 @@
+require("./util/calculoPrima")()
 require("./util/conection")()
 var conexion = connection()
+var addition = suma()
 //dependencies
 const express = require("express")
 const app     = express()
@@ -25,6 +27,7 @@ app.listen(port, () => {
 
 app.get('/', (req,res) => {
   res.render("index")
+  console.log(addition)
 })
 
 app.get('/user', (req,res) => {

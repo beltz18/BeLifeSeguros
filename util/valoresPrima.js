@@ -68,3 +68,15 @@ const recargoSeguroEstado = {
   "casado": 2.4,
   "otros": 3.6
 }
+
+module.exports = {
+  valorBase,
+  recargoEdadContr,
+  recargoGeneroContr,
+  recargoVehiculoContr,
+  recargoHogarContr,
+  recargoRegionContr,
+  recargoSeguroEdad,
+  recargoSeguroGenero,
+  recargoSeguroEstado
+}
