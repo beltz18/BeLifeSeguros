@@ -247,7 +247,7 @@
         </button>
         <div class="py-6 px-6 lg:px-8">
           <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Registar nuevo cliente</h3>
-          <form class="space-y-6" action="#">
+          <form class="space-y-6" action="/user/crud/add" method="POST">
             <div>
               <input type="text" name="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Nombre completo" required>
             </div>
@@ -257,16 +257,12 @@
             <div>
               <input type="tel" name="phone" placeholder="Número de teléfono" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
             </div>
-            <div>
+            <div class="grid gap-6 mb-6 lg:grid-cols-2 myFlex">
               <select name="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="0">-- Género --</option>
-                <optgroup>
-                  <option value="M">Masculino</option>
-                  <option value="F">Femenino</option>
-                </optgroup>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
               </select>
-            </div>
-            <div class="grid gap-6 mb-6 lg:grid-cols-2">
+              <input type="text" name="age" placeholder="Edad" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
               <input type="text" name="address" placeholder="Dirección" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
               <select name="region" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="0">-- Región --</option>
@@ -280,8 +276,8 @@
               <select name="civil_state" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="0">-- Estado civil --</option>
                 <optgroup>
-                  <option value="soltero">Soltero</option>
-                  <option value="casado">Casado</option>
+                  <option value="soltero(a)">Soltero</option>
+                  <option value="casado(a)">Casado</option>
                 </optgroup>
               </select>
             </div>

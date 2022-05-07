@@ -1,7 +1,7 @@
-require("./util/calculoPrima")()
 require("./util/conection")()
+require("./util/calculoPrima")()
+require("./util/query")()
 var conexion = connection()
-var addition = suma()
 //dependencies
 const express = require("express")
 const app     = express()
@@ -38,6 +38,14 @@ app.get('/seguro', (req,res) => {
   res.render("seguros")
 })
 
-app.post("/user/crud/add", () => {})
-app.post("/user/crud/delete", () => {})
-app.post("/user/crud/update", () => {})
+app.post("/user/crud/add", (req,res) => {
+  const { fullname,dni,phone,gender,age,address,region,civil_state } = req.body
+  const sql = new_user(fullname,dni,phone,gender,age,address,region,civil_state)
+  conexion.query(sql, (err,data,fields) => {
+    if (err) throw err
+    res.redirect("/user")
+  })
+})
+
+app.post("/user/crud/delete", (req,res) => {})
+app.post("/user/crud/update", (req,res) => {})
