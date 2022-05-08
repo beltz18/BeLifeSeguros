@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS cliente (
 DROP TABLE IF EXISTS contrato;
 CREATE TABLE IF NOT EXISTS contrato (
   idt_cnt INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  tip_cnt SET("Vida", "Hogar", "Vehículo") NOT NULL,
+  tip_cnt SET("Vida", "Hogar", "Vehiculo") NOT NULL,
   dni_usr VARCHAR(20) NOT NULL,
   yea_cnt YEAR NOT NULL,
   prm_anu INT UNSIGNED NOT NULL,
