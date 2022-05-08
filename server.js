@@ -31,7 +31,14 @@ app.get('/', (req,res) => {
 })
 
 app.get('/user', (req,res) => {
-  res.render("clientes")
+  const sql = get_all_user()
+  let users = []
+  conexion.query(sql, function (err,data,fields) {
+    if (err) throw err
+    users = data
+    console.log(users[0].idt_usr)
+    res.render("clientes", {users})
+  })
 })
 
 app.get('/seguro', (req,res) => {
