@@ -99,5 +99,5 @@ app.get("/seguro/crud/delete/:id", (req,res) => {
 })
 
 app.get("/seguro/crud/update/:id", (req,res) => {
-
+  console.log("no update function set")
 })
