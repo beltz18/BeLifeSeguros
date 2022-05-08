@@ -23,10 +23,7 @@ app.use(express.static('views'))
 
 //Server
 app.listen(port, () => {
-  conexion.connect(function (err) {
-    if (err) throw err
-    console.log(`Server running on http://localhost:${port}`)
-  })
+  console.log(`Server running on http://localhost:${port}`)
 })
 
 //Index
