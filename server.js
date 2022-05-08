@@ -36,13 +36,19 @@ app.get('/user', (req,res) => {
   conexion.query(sql, function (err,data,fields) {
     if (err) throw err
     users = data
-    console.log(users[0].idt_usr)
     res.render("clientes", {users})
   })
 })
 
 app.get('/seguro', (req,res) => {
-  res.render("seguros")
+  const sql    = get_all_contracts()
+  let contract = []
+  conexion.query(sql, function (err,data,fields) {
+    if (err) throw err
+    contract = data
+    console.log(contract)
+    res.render("seguros", {contract})
+  })
 })
 
 app.post("/user/crud/add", (req,res) => {
@@ -55,4 +61,5 @@ app.post("/user/crud/add", (req,res) => {
 })
 
 app.post("/user/crud/delete", (req,res) => {})
+
 app.post("/user/crud/update", (req,res) => {})

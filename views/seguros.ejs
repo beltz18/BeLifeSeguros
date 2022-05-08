@@ -36,69 +36,29 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-          <th scope="row" class="text-center px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-            Vida
-          </th>
-          <td class="px-6 py-4">
-            28061587
-          </td>
-          <td class="px-6 py-4">
-            José Omar Colmenares Ramírez
-          </td>
-          <td class="px-6 py-4">
-            2022
-          </td>
-          <td class="px-6 py-3">
-            49UF
-          </td>
-          <td class="px-6 py-4 text-center">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
-            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
-          </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-          <th scope="row" class="text-center px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-            Vehículo
-          </th>
-          <td class="px-6 py-4">
-            28061587
-          </td>
-          <td class="px-6 py-4">
-            José Omar Colmenares Ramírez
-          </td>
-          <td class="px-6 py-4">
-            2022
-          </td>
-          <td class="px-6 py-3">
-            49UF
-          </td>
-          <td class="px-6 py-4 text-center">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
-            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
-          </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-          <th scope="row" class="text-center px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-            Hogar
-          </th>
-          <td class="px-6 py-4">
-            28061587
-          </td>
-          <td class="px-6 py-4">
-            José Omar Colmenares Ramírez
-          </td>
-          <td class="px-6 py-4">
-            2022
-          </td>
-          <td class="px-6 py-3">
-            49UF
-          </td>
-          <td class="px-6 py-4 text-center">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
-            <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
-          </td>
-        </tr>
+        <% contract.forEach(item => { %>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th scope="row" class="text-center px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+              <%= item.tip_cnt %> 
+            </th>
+            <td class="px-6 py-4">
+              <%= item.dni_usr %> 
+            </td>
+            <td class="px-6 py-4">
+              <%= item.nom_usr %>
+            </td>
+            <td class="px-6 py-4">
+              <%= item.yea_cnt %> 
+            </td>
+            <td class="px-6 py-3">
+              <%= item.prm_anu %>
+            </td>
+            <td class="px-6 py-4 text-center">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500">Editar</a>
+              <a href="#" class="font-medium text-red-600 dark:text-red-500">Eliminar</a>
+            </td>
+          </tr>
+        <% }) %>
       </tbody>
     </table>
     <br>

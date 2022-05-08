@@ -14,4 +14,12 @@ module.exports = function () {
     const sql = `SELECT * FROM cliente WHERE gnd_usr LIKE '${a}' OR nom_usr LIKE '${a}' OR reg_usr LIKE '${a}' OR dni_usr LIKE '${a}';`
     return sql
   }
+  this.get_all_contracts = () => {
+    const sql = `SELECT * FROM contrato INNER JOIN cliente ON contrato.dni_usr = cliente.dni_usr`
+    return sql
+  }
+  this.get_user = (a) => {
+    const sql = `SELECT * FROM contato WHERE tip_cnt LIKE '${a}' OR yea_cnt LIKE '${a}' OR dni_usr LIKE '${a}';`
+    return sql
+  }
 }
